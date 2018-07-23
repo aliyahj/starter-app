@@ -21,6 +21,12 @@ p1Display.textContent = p1Score ;
 });
 
 p2Button.addEventListener("click" , function(){
+	if(!gameOver){
 p2Score++ ;
-p2Display.textContent = p2Score ;
+if(p2Score === winningScore) {
+	gameOver = true
+}
+p2Display.textContent = p2Score ;		
+	}
+
 });
